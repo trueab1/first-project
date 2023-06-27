@@ -1,4 +1,4 @@
-    import java.util.Scanner;
+import java.util.Scanner;
 
     public class Praktikum {
 
@@ -8,18 +8,26 @@
             int year = scanner.nextInt();
 
             if (isLeapYear(year)) {
-            System.out.println ("12.09." + year)    // здесь нужно вывести результат
-            }
-            else {
-                System.out.println ("13.09." + year)
+                System.out.println("12.09." + year);    // здесь нужно вывести результат
+            } else {
+                System.out.println("13.09." + year);
             }
         }
 
-        public static boolean isLeapYear(int year) = (
-            (year % 4 == 0 ) ||
-                (year % 400 == 0 && year % 100 != 0)
-                );// здесь нужно определить, является ли переданный год високосным
+        public static boolean isLeapYear(int year)
+        {
+            if (year % 4 == 0) {
+                return true;
+            }
+            else if (year % 400 == 0) {
+                    return true ;}
+            else if (year % 100 == 0) {
+                return false ; }
+            else {
+                return false; }
+            // здесь нужно определить, является ли переданный год високосным
         }
+    }
 
 
 
